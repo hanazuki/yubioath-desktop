@@ -13,6 +13,7 @@ environment:
   LIBUSB_VERSION: "1.0.21"
   PY_VERSION: "3.6.4"
   PYOTHERSIDE_VERSION: "1.5.3"
+  ARTIFACT_NAME: "$(APPVEYOR_REPO_BRANCH)$(APPVEYOR_REPO_TAG_NAME)"
 
 init:
   # Needed for jom to work.
@@ -90,7 +91,7 @@ after_build:
   - cd %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
-  - path: .\yubioath-desktop-$(APPVEYOR_REPO_BRANCH)$(APPVEYOR_REPO_TAG_NAME)-win.zip
+  - path: .\yubioath-desktop-$(ARTIFACT_NAME)-win.zip
 
 deploy:
   - provider: S3
