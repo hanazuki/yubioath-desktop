@@ -6,6 +6,7 @@ Cross-platform application for generating Open Authentication (OATH) time-based 
 
 image:screenshot.png[]
 
+
 === Features
 * Keep your OATH secrets safe by storing them on a YubiKey and generate the codes with this application.
 * Add a credential by scanning a QR code on the screen.
