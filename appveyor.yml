@@ -90,7 +90,7 @@ after_build:
   - cd %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
-  - path: .\yubioath-desktop-$env:APPVEYOR_REPO_BRANCH$env:APPVEYOR_REPO_TAG_NAME-win.zip
+  - path: .\yubioath-desktop-$(APPVEYOR_REPO_BRANCH)$(APPVEYOR_REPO_TAG_NAME)-win.zip
 
 deploy:
   - provider: S3
